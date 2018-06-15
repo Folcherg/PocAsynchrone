@@ -1,0 +1,21 @@
+﻿<Window x:Class="PocAsynchrone.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PocAsynchrone"
+        mc:Ignorable="d"
+        Title="POC async await" Height="150" Width="250"
+        x:Name="This">
+    
+    <Grid Background="LightBlue">
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+        </Grid.RowDefinitions>
+        <ProgressBar Name="ProgressBar" Background="LightBlue" Foreground="LawnGreen" Value="{Binding ElementName=This, Path=Progress}"/>
+        <Button Grid.Row="1" Margin="2" Click="ButtonBase_OnClickSynchrone">Process Synchrone</Button>
+        <Button Grid.Row="2" Margin="2" Click="ButtonBase_OnClickAsynchrone">Process Asynchrone</Button>
+    </Grid>
+</Window>
